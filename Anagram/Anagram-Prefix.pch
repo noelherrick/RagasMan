@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Anagram' target in the 'Anagram' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

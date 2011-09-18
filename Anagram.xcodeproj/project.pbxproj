@@ -1,0 +1,231 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		293632D21426A68B00F7A15B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293632D11426A68B00F7A15B /* Foundation.framework */; };
+		293632D51426A68B00F7A15B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 293632D41426A68B00F7A15B /* main.m */; };
+		293632D91426A68B00F7A15B /* Anagram.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 293632D81426A68B00F7A15B /* Anagram.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		293632CB1426A68B00F7A15B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				293632D91426A68B00F7A15B /* Anagram.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		293632CD1426A68B00F7A15B /* Anagram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Anagram; sourceTree = BUILT_PRODUCTS_DIR; };
+		293632D11426A68B00F7A15B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		293632D41426A68B00F7A15B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		293632D71426A68B00F7A15B /* Anagram-Prefix.pch */ = {isa = PBXFileReference; path = "Anagram-Prefix.pch"; sourceTree = "<group>"; };
+		293632D81426A68B00F7A15B /* Anagram.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Anagram.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		293632CA1426A68B00F7A15B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				293632D21426A68B00F7A15B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		293632C21426A68B00F7A15B = {
+			isa = PBXGroup;
+			children = (
+				293632D31426A68B00F7A15B /* Anagram */,
+				293632D01426A68B00F7A15B /* Frameworks */,
+				293632CE1426A68B00F7A15B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		293632CE1426A68B00F7A15B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				293632CD1426A68B00F7A15B /* Anagram */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		293632D01426A68B00F7A15B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				293632D11426A68B00F7A15B /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		293632D31426A68B00F7A15B /* Anagram */ = {
+			isa = PBXGroup;
+			children = (
+				293632D41426A68B00F7A15B /* main.m */,
+				293632D81426A68B00F7A15B /* Anagram.1 */,
+				293632D61426A68B00F7A15B /* Supporting Files */,
+			);
+			path = Anagram;
+			sourceTree = "<group>";
+		};
+		293632D61426A68B00F7A15B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				293632D71426A68B00F7A15B /* Anagram-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		293632CC1426A68B00F7A15B /* Anagram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 293632DC1426A68B00F7A15B /* Build configuration list for PBXNativeTarget "Anagram" */;
+			buildPhases = (
+				293632C91426A68B00F7A15B /* Sources */,
+				293632CA1426A68B00F7A15B /* Frameworks */,
+				293632CB1426A68B00F7A15B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Anagram;
+			productName = Anagram;
+			productReference = 293632CD1426A68B00F7A15B /* Anagram */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		293632C41426A68B00F7A15B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 293632C71426A68B00F7A15B /* Build configuration list for PBXProject "Anagram" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 293632C21426A68B00F7A15B;
+			productRefGroup = 293632CE1426A68B00F7A15B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				293632CC1426A68B00F7A15B /* Anagram */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		293632C91426A68B00F7A15B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				293632D51426A68B00F7A15B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		293632DA1426A68B00F7A15B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		293632DB1426A68B00F7A15B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		293632DD1426A68B00F7A15B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Anagram/Anagram-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		293632DE1426A68B00F7A15B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Anagram/Anagram-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		293632C71426A68B00F7A15B /* Build configuration list for PBXProject "Anagram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				293632DA1426A68B00F7A15B /* Debug */,
+				293632DB1426A68B00F7A15B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		293632DC1426A68B00F7A15B /* Build configuration list for PBXNativeTarget "Anagram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				293632DD1426A68B00F7A15B /* Debug */,
+				293632DE1426A68B00F7A15B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 293632C41426A68B00F7A15B /* Project object */;
+}
