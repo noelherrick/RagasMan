@@ -1,0 +1,29 @@
+Ragas Man - An Objective-C experiment
+-------------------------------------
+
+Ragas Man is a simple anagram finder. This application consists of two programs: one to import a text file into the database and one to provide the functions necessary to find an anagram. This is an experiment, and in no way should it be expected to be production quality, as this was an attempt to familiarize myself with Objective-C using Xcode.
+
+I was going to use Kyoto Cabinet rather than Redis, but the former does not have sets, and thus would require me to build my own solution. Since this was not an attempt at implementing a database, I chose to use Redis, even though it uses a slower protocol. I highly doubt you will notice the difference.
+
+Prerequisites
+-------------
+
+You must have Xcode (which implies a Mac), Redis running on the local instance listening on port 6379, and Hiredis installed.
+
+Hiredis Installation
+--------------------
+
+Follow the README for Hiredis, then from the source directory, copy the hiredis.h and the libhiredis.o files to /usr/local/include and /usr/local/lib respectively.
+
+    % cp hiredis.h /usr/local/include
+    % cp libhiredis.o /usr/local/include
+
+Installing
+----------
+
+From Xcode, simply build.
+
+Running
+-------
+
+Anagram is the main CLI for finding anagrams. DictionaryImporter is the utility you must use to import the words (see the --help for more info). The text file you use must be a word per line, named dictionary.txt, and placed in your home directory.
