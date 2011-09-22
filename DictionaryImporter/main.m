@@ -45,7 +45,7 @@ int main (int argc, const char * argv[])
     NSArray *words = [dictionary componentsSeparatedByString:@"\n"];
         
     // Call the database saving functions
-    int returnCode = [DictionaryModel saveWords: words];
+    int returnCode = [DictionaryModel saveWords:words :1];
     
     [pool drain];
     

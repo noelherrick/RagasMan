@@ -28,9 +28,12 @@
 
 static int char_compare(const void* a, const void* b) {
     
-    if((char*)a < (char*)b) {
+    char alice = ((char*)a)[0];
+    char bob = ((char*)b)[0];
+    
+    if(alice < bob) {
         return -1;
-    } else if((char*)a > (char*)b) {
+    } else if(alice > bob) {
         return 1;
     } else {
         return 0;
@@ -38,11 +41,11 @@ static int char_compare(const void* a, const void* b) {
 }
 
 + (NSString*) sortLetterInWord: (NSString*) word {
-    // Get the length of the word
-    long len = [word length];
+    // Get the length of the word (plus null termination)
+    long len = [word length] + 1;
     
-    // Create a string long enough to hold it (plus null termination)
-    char *cString = malloc(len + 1);
+    // Create a string long enough to hold it
+    char *cString = malloc(len);
     
     // Extract C-style string from NSString
     [word getCString:cString maxLength:len encoding:NSASCIIStringEncoding];

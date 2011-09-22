@@ -26,7 +26,46 @@
 
 @implementation DictionaryModel
 
-+ (int) saveWords: (NSArray*) words {
++ (NSMutableArray*) getMatchingWords : (NSString*) pattern : (int) db_index {
+    NSMutableArray* results = [[NSMutableArray alloc] init];
+    
+    // Connect to redis
+    redisContext *redisContext;
+    
+    struct timeval timeout = { 1, 500000 };
+    
+    redisContext = redisConnectWithTimeout((char*)"127.0.0.1", 6379, timeout);
+    
+    redisReply *reply;
+    
+    // Check to see if that was successful
+    if (redisContext->err) {
+        printf("Connection error: %s\n", redisContext->errstr);
+    }
+    
+    // Select the 1st database
+    reply = redisCommand(redisContext,"SELECT %d", db_index);
+    
+    if (reply->type == 6) { // Redis Error
+        printf("Database selection error: %s\n", reply->str);
+    }
+    
+    freeReplyObject(reply);
+    
+    reply = redisCommand(redisContext, "SMEMBERS %s", [pattern cStringUsingEncoding:NSASCIIStringEncoding]);
+    
+    if (reply->elements > 0) {
+        for (int i = 0; i < reply->elements; i++) {
+            [results addObject : [NSString stringWithCString:reply->element[i]->str encoding:NSASCIIStringEncoding]];
+        }
+    }
+    
+    freeReplyObject(reply);
+    
+    return results;
+}
+
++ (int) saveWords: (NSArray*) words : (int) db_index {
     // Connect to redis
     redisContext *redisContext;
     
@@ -43,7 +82,7 @@
     } 
     
     // Select the 1st database
-    reply = redisCommand(redisContext,"SELECT 1");
+    reply = redisCommand(redisContext,"SELECT %d", db_index);
     
     if (reply->type == 6) { // Redis Error
         printf("Database selection error: %s\n", reply->str);

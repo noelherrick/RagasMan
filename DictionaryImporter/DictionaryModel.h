@@ -28,6 +28,7 @@
 
 @interface DictionaryModel : NSObject
 
-+ (int) saveWords: (NSArray*) words;
++ (int) saveWords : (NSArray*) words : (int) db_index;
++ (NSMutableArray*) getMatchingWords : (NSString*) pattern : (int) db_index;
 
 @end

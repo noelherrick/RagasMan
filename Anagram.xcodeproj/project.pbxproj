@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2923E3921429136700F77C70 /* GHUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2923E3911429136700F77C70 /* GHUnit.framework */; };
+		2923E3931429137100F77C70 /* GHUnit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2923E3911429136700F77C70 /* GHUnit.framework */; };
+		2923E3981429974700F77C70 /* word-machines.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A7041D1426EA8A00460073 /* word-machines.m */; };
+		2923E39A142A6C1700F77C70 /* DictionaryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A704571428503200460073 /* DictionaryModel.m */; };
+		2923E39C142ABD4800F77C70 /* GHUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2923E39B142ABD4800F77C70 /* GHUnitTestMain.m */; };
 		29270E5E142908FB0051B993 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A704611428549500460073 /* Cocoa.framework */; };
 		29270E64142908FB0051B993 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29270E62142908FB0051B993 /* InfoPlist.strings */; };
-		29270E66142908FB0051B993 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29270E65142908FB0051B993 /* main.m */; };
 		29270E6A142908FB0051B993 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 29270E68142908FB0051B993 /* Credits.rtf */; };
-		29270E6D142908FB0051B993 /* TestsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29270E6C142908FB0051B993 /* TestsAppDelegate.m */; };
-		29270E70142908FC0051B993 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29270E6E142908FC0051B993 /* MainMenu.xib */; };
+		29270E7A142909FB0051B993 /* DictionaryModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29270E79142909FB0051B993 /* DictionaryModelTests.m */; };
 		293632D21426A68B00F7A15B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293632D11426A68B00F7A15B /* Foundation.framework */; };
 		293632D51426A68B00F7A15B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 293632D41426A68B00F7A15B /* main.m */; };
 		293632D91426A68B00F7A15B /* Anagram.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 293632D81426A68B00F7A15B /* Anagram.1 */; };
@@ -25,6 +28,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		29270E74142909580051B993 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 11;
+			files = (
+				2923E3931429137100F77C70 /* GHUnit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		293632CB1426A68B00F7A15B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -48,17 +61,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		29270DCE14285EBA0051B993 /* GHUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnit.framework; path = "../../gh-unit/Project-MacOSX/build/Release/GHUnit.framework"; sourceTree = "<group>"; };
+		2923E3911429136700F77C70 /* GHUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnit.framework; sourceTree = "<group>"; };
+		2923E39B142ABD4800F77C70 /* GHUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHUnitTestMain.m; path = Tests/GHUnitTestMain.m; sourceTree = SOURCE_ROOT; };
 		29270E471428C17F0051B993 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		29270E5C142908FB0051B993 /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		29270E61142908FB0051B993 /* Tests-Info.plist */ = {isa = PBXFileReference; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		29270E61142908FB0051B993 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		29270E63142908FB0051B993 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		29270E65142908FB0051B993 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		29270E67142908FB0051B993 /* Tests-Prefix.pch */ = {isa = PBXFileReference; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		29270E67142908FB0051B993 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		29270E69142908FB0051B993 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		29270E6B142908FB0051B993 /* TestsAppDelegate.h */ = {isa = PBXFileReference; path = TestsAppDelegate.h; sourceTree = "<group>"; };
-		29270E6C142908FB0051B993 /* TestsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestsAppDelegate.m; sourceTree = "<group>"; };
-		29270E6F142908FC0051B993 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		29270E79142909FB0051B993 /* DictionaryModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryModelTests.m; sourceTree = "<group>"; };
 		293632CD1426A68B00F7A15B /* Anagram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Anagram; sourceTree = BUILT_PRODUCTS_DIR; };
 		293632D11426A68B00F7A15B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		293632D41426A68B00F7A15B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -70,8 +82,8 @@
 		293632EB1426B1DF00F7A15B /* DictionaryImporter.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = DictionaryImporter.1; sourceTree = "<group>"; };
 		29A7041C1426EA8A00460073 /* word-machines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "word-machines.h"; sourceTree = "<group>"; };
 		29A7041D1426EA8A00460073 /* word-machines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "word-machines.m"; sourceTree = "<group>"; };
-		29A704561428503200460073 /* DictionaryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryModel.h; sourceTree = "<group>"; };
-		29A704571428503200460073 /* DictionaryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryModel.m; sourceTree = "<group>"; };
+		29A704561428503200460073 /* DictionaryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictionaryModel.h; path = DictionaryImporter/DictionaryModel.h; sourceTree = "<group>"; };
+		29A704571428503200460073 /* DictionaryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DictionaryModel.m; path = DictionaryImporter/DictionaryModel.m; sourceTree = "<group>"; };
 		29A704611428549500460073 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		29A704641428549500460073 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		29A704651428549500460073 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -84,6 +96,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29270E5E142908FB0051B993 /* Cocoa.framework in Frameworks */,
+				2923E3921429136700F77C70 /* GHUnit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,13 +119,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2923E399142A647B00F77C70 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				29A704561428503200460073 /* DictionaryModel.h */,
+				29A704571428503200460073 /* DictionaryModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		29270E5F142908FB0051B993 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				29270E6B142908FB0051B993 /* TestsAppDelegate.h */,
-				29270E6C142908FB0051B993 /* TestsAppDelegate.m */,
-				29270E6E142908FC0051B993 /* MainMenu.xib */,
 				29270E60142908FB0051B993 /* Supporting Files */,
+				29270E79142909FB0051B993 /* DictionaryModelTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -132,6 +152,8 @@
 		293632C21426A68B00F7A15B = {
 			isa = PBXGroup;
 			children = (
+				2923E399142A647B00F77C70 /* Models */,
+				2923E3911429136700F77C70 /* GHUnit.framework */,
 				29A7041B1426EA4900460073 /* Helpers */,
 				293632D31426A68B00F7A15B /* Anagram */,
 				293632E61426B1DF00F7A15B /* DictionaryImporter */,
@@ -156,7 +178,6 @@
 			children = (
 				293632D11426A68B00F7A15B /* Foundation.framework */,
 				29A704611428549500460073 /* Cocoa.framework */,
-				29270DCE14285EBA0051B993 /* GHUnit.framework */,
 				29270E471428C17F0051B993 /* SenTestingKit.framework */,
 				29A704631428549500460073 /* Other Frameworks */,
 			);
@@ -184,11 +205,10 @@
 		293632E61426B1DF00F7A15B /* DictionaryImporter */ = {
 			isa = PBXGroup;
 			children = (
+				2923E39B142ABD4800F77C70 /* GHUnitTestMain.m */,
 				293632E71426B1DF00F7A15B /* main.m */,
 				293632EB1426B1DF00F7A15B /* DictionaryImporter.1 */,
 				293632E91426B1DF00F7A15B /* Supporting Files */,
-				29A704561428503200460073 /* DictionaryModel.h */,
-				29A704571428503200460073 /* DictionaryModel.m */,
 			);
 			path = DictionaryImporter;
 			sourceTree = "<group>";
@@ -227,6 +247,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29270E71142908FC0051B993 /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
+				29270E74142909580051B993 /* CopyFiles */,
 				29270E58142908FB0051B993 /* Sources */,
 				29270E59142908FB0051B993 /* Frameworks */,
 				29270E5A142908FB0051B993 /* Resources */,
@@ -305,7 +326,6 @@
 			files = (
 				29270E64142908FB0051B993 /* InfoPlist.strings in Resources */,
 				29270E6A142908FB0051B993 /* Credits.rtf in Resources */,
-				29270E70142908FC0051B993 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,8 +336,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29270E66142908FB0051B993 /* main.m in Sources */,
-				29270E6D142908FB0051B993 /* TestsAppDelegate.m in Sources */,
+				2923E39A142A6C1700F77C70 /* DictionaryModel.m in Sources */,
+				2923E3981429974700F77C70 /* word-machines.m in Sources */,
+				29270E7A142909FB0051B993 /* DictionaryModelTests.m in Sources */,
+				2923E39C142ABD4800F77C70 /* GHUnitTestMain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,14 +381,6 @@
 			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
-		29270E6E142908FC0051B993 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				29270E6F142908FC0051B993 /* en */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -376,10 +390,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = "-lhiredis";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -391,10 +410,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = "-lhiredis";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -448,6 +472,10 @@
 		293632DD1426A68B00F7A15B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Anagram/Anagram-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/local/include;
@@ -461,6 +489,10 @@
 		293632DE1426A68B00F7A15B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Anagram/Anagram-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/local/include;
@@ -507,6 +539,7 @@
 				29270E73142908FC0051B993 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		293632C71426A68B00F7A15B /* Build configuration list for PBXProject "Anagram" */ = {
 			isa = XCConfigurationList;

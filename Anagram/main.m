@@ -25,6 +25,7 @@
 #import <Foundation/Foundation.h>
 #import "word-machines.h"
 #import <hiredis.h>
+#import "DictionaryModel.h"
 
 int main (int argc, const char * argv[])
 {
@@ -32,40 +33,15 @@ int main (int argc, const char * argv[])
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 
     if (argc > 0 && strcmp(argv[0], "--help") == 0) {
-        printf("This program asks you for input then prints possible anagrams from this word (whole word anagrams only).");
+        NSLog(@"This program asks you for input then prints possible anagrams from this word (whole word anagrams only).");
         
         return 0;
     }
     
-    // Connect to redis
-    redisContext *redisContext;
-    
-    struct timeval timeout = { 1, 500000 };
-    
-    redisContext = redisConnectWithTimeout((char*)"127.0.0.1", 6379, timeout);
-    
-    redisReply *reply;
-    
-    // Check to see if that was successful
-    if (redisContext->err) {
-        printf("Connection error: %s\n", redisContext->errstr);
-        return 1;
-    }
-    
-    // Select the 1st database
-    reply = redisCommand(redisContext,"SELECT 1");
-    
-    if (reply->type == 6) { // Redis Error
-        printf("Database selection error: %s\n", reply->str);
-        return 2;
-    }
-    
-    freeReplyObject(reply);
-    
     BOOL cont = true;
     
     while (cont) {
-        printf("Please enter a word, and press enter. Enter -q to quit.\n");
+        NSLog(@"Please enter a word, and press enter. Enter -q to quit.\n");
         
         char anagramee [256];
         
@@ -73,26 +49,25 @@ int main (int argc, const char * argv[])
         
         // Check to see if it is -q
         if (strcmp(anagramee,"-q") == 0) {
-            printf("Exiting.");
+            NSLog(@"Exiting.");
             
             break;
         }
         
         NSString* sortedString = [word_machines sortLetterInWord: [NSString stringWithCString:anagramee encoding:NSASCIIStringEncoding]];
         
-        reply = redisCommand(redisContext, "SMEMBERS %s", [sortedString cStringUsingEncoding:NSASCIIStringEncoding]);
+        NSMutableArray* results = [DictionaryModel getMatchingWords: sortedString : 1];
         
-        if (reply->elements > 0) {
-            printf("Found results. Printing.\n");
+        if ([results count] > 0) {
+            NSLog(@"Found results. Printing.");
             
-            for (int i = 0; i < reply->elements; i++) {
-                printf("%s\n", reply->element[i]->str);
+            for (NSString* word in results) {
+                NSLog(@"%@", word);
             }
         } else {
-            printf("No results.");
+            NSLog(@"No results.");
         }
         
-        freeReplyObject(reply);
     }
     
     [pool drain];

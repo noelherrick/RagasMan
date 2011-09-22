@@ -15,8 +15,8 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "29270E451428C17F0051B993"
-               BuildableName = "Tests.octest"
+               BlueprintIdentifier = "29270E5B142908FB0051B993"
+               BuildableName = "Tests.app"
                BlueprintName = "Tests"
                ReferencedContainer = "container:Anagram.xcodeproj">
             </BuildableReference>
@@ -29,6 +29,15 @@
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Debug">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "29270E5B142908FB0051B993"
+            BuildableName = "Tests.app"
+            BlueprintName = "Tests"
+            ReferencedContainer = "container:Anagram.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

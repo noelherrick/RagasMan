@@ -10,6 +10,8 @@ Prerequisites
 
 You must have Xcode (which implies a Mac), Redis running on the local instance listening on port 6379, and Hiredis installed.
 
+To run tests, you will need gh-unit (available on github).
+
 Hiredis Installation
 --------------------
 
